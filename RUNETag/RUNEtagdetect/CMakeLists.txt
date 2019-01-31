@@ -17,7 +17,7 @@ INCLUDE_DIRECTORIES(.
 					${OpenCV_INCLUDE_DIRS}
 					${Boost_INCLUDE_DIRS}
 					)
-					
+
 
 ADD_EXECUTABLE( ${PROJECT_NAME} RUNEtagdetect.cpp  test_occlusion.cpp test_occlusion.h)
 

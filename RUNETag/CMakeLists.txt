@@ -40,14 +40,14 @@ ADD_SUBDIRECTORY( WinNTL )
 
 
 INCLUDE_DIRECTORIES( "${PROJECT_SOURCE_DIR}/include"
-					  ${OpenCV_INCLUDE_DIRS} 
+					  ${OpenCV_INCLUDE_DIRS}
 					  "WinNTL/include"
 					   )
-					  
+
 INSTALL( DIRECTORY "${PROJECT_SOURCE_DIR}/include" DESTINATION . )
 INSTALL( DIRECTORY "${PROJECT_SOURCE_DIR}/WinNTL/include" DESTINATION . )
 
-SET( RUNETAG_SRCS 
+SET( RUNETAG_SRCS
 		auxmath.cpp
 		auxrenderer.cpp
 		ellipsefitter.cpp
@@ -63,8 +63,8 @@ SET( RUNETAG_SRCS
 		slot.cpp
 		coding.cpp
 		)
-	 
-SET( RUNETAG_INCL 
+
+SET( RUNETAG_INCL
 	  "include/auxmath.hpp"
 	  "include/auxrenderer.hpp"
 	  "include/digitalmarkermodel.hpp"
@@ -82,7 +82,7 @@ SET( RUNETAG_INCL
 	  "include/ellipsedetector.hpp"
 	  "include/runetag.hpp"
 	  "include/coding.h")
-	  
+
 
 ADD_LIBRARY( ${PROJECT_NAME} STATIC ${RUNETAG_SRCS} ${RUNETAG_INCL} )
 TARGET_LINK_LIBRARIES(${PROJECT_NAME} WinNTL ${OpenCV_LIBS})
